@@ -1,0 +1,31 @@
+debug: true
+spring:
+  # datasource
+  datasource:
+    url: jdbc:postgresql://localhost:5432/white_jotter_db
+    username: zhangweiming
+    password: zwm1995731
+    driver-class-name: org.postgresql.Driver
+    schema: classpath*:sql/schema.sql
+    data: classpath*:sql/data.sql
+    initialization-mode: always
+  # 热部署
+  devtools:
+    restart:
+      enabled: true
+      additional-paths:
+      additional-exclude: src/main/java
+  freemarker:
+    cache: false
+  thymeleaf:
+    cache: false
+
+# MyBatis
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.zwm.whitejotter.bean.po
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8443

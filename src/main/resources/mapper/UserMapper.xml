@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zwm.whitejotter.mapper.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.zwm.whitejotter.bean.po.User">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+    </resultMap>
+
+    <select id="selectById" resultType="User" parameterType="Integer">
+        SELECT * FROM t_user WHERE id = #{id}
+    </select>
+
+    <select id="selectByUsername" resultType="User" parameterType="String">
+        SELECT * FROM t_user WHERE username = #{username}
+    </select>
+
+    <select id="selectByUsernameAndPassword" resultType="User" parameterType="String">
+        SELECT * FROM t_user WHERE username = #{username} AND password = #{password}
+    </select>
+</mapper>
