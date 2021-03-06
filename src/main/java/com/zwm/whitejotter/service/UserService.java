@@ -3,10 +3,10 @@ package com.zwm.whitejotter.service;
 import com.zwm.whitejotter.bean.po.User;
 
 /**
- * @ClassName: UserService
+ * @InterfaceName: UserService
  * @Description: 用户Service接口
  * @Author: zhangweiming
- * @Date: 19:33 2021/3/6
+ * @Date: 21:56 2021/3/6
  * @Version: 1.0
  */
 public interface UserService {

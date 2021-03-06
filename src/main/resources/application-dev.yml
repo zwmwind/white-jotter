@@ -13,8 +13,7 @@ spring:
   devtools:
     restart:
       enabled: true
-      additional-paths:
-      additional-exclude: src/main/java
+      additional-paths: src/main/java
   freemarker:
     cache: false
   thymeleaf:

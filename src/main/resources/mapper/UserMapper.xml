@@ -5,7 +5,7 @@
 
 <mapper namespace="com.zwm.whitejotter.mapper.UserMapper">
 
-    <resultMap id="UserResultMap" type="com.zwm.whitejotter.bean.po.User">
+    <resultMap id="UserResultMap" type="User">
         <result column="id" jdbcType="INTEGER" property="id"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
